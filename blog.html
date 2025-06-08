@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Executive Venice | Explore Italy Destinations</title>
+    <meta name="description" content="Discover top travel destinations in Venice and Northern Italy with Executive Venice. Explore Trieste, Verona, the Dolomites, and more.">
+    <meta name="keywords" content="Venice travel, Italy travel blog, Trieste, Dolomites, Verona, Cortina d'Ampezzo, Ravenna, Executive Venice">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Executive Venice">
+    <link rel="canonical" href="https://www.executive-venice.com/blog.html">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Travel Blog - Executive Venice">
+    <meta property="og:description" content="Discover top travel destinations in Venice and Northern Italy with Executive Venice's travel blog, featuring Trieste, Verona, the Dolomites, and more.">
+    <meta property="og:image" content="https://www.executive-venice.com/images/venice-blog.jpg">
+    <meta property="og:url" content="https://www.executive-venice.com/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Executive Venice">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Travel Blog - Executive Venice">
+    <meta name="twitter:description" content="Discover top travel destinations in Venice and Northern Italy with Executive Venice's travel blog.">
+    <meta name="twitter:image" content="https://www.executive-venice.com/images/venice-blog.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/cookie-consent.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            font-family: "DM Sans", sans-serif;
+            background-color: #fff;
+        }
+        .tourism-grid {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .tourism-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .tourism-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            loading: lazy; /* Added for SEO/performance */
+        }
+        .tourism-item img:hover {
+            transform: scale(1.05);
+        }
+        .tourism-item h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+        .tourism-item p {
+            font-size: 0.95rem;
+            color: #606d71;
+        }
+        .tourism-item a {
+            text-decoration: none;
+        }
+        .btn-learn-more {
+            border-radius: 25px;
+            font-weight: 500;
+            padding: 8px 20px;
+            margin-top: 10px;
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-learn-more:hover {
+            background-color: black;
+            color: white;
+        }
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .tourism-grid {
+                margin-top: 30px !important; /* Override inline style for mobile */
+            }
+        }
+             /* Media query for smaller screens */
+        @media (min-width: 1900px) {
+            .tourism-grid {
+                margin-top: 250px !important; /* Override inline style for mobile */
+            }
+        }
+                /* Cookie Consent Panel */
+        #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default, shown via JS */
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        #cookie-consent p {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+        }
+
+        #cookie-consent .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        #cookie-consent button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #cookie-consent #accept-cookies {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        #cookie-consent #decline-cookies {
+            background-color: #fff;
+            color: #333;
+        }
+
+        #cookie-consent button:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 576px) {
+            #cookie-consent {
+                padding: 10px;
+            }
+            #cookie-consent p {
+                font-size: 0.8rem;
+            }
+            #cookie-consent .buttons {
+                flex-direction: column;
+                gap: 5px;
+            }
+            #cookie-consent button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder" class="bg-light py-3"></div>
+
+    <!-- Tourism Grid Section -->
+    <div class="container tourism-grid" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col-md-4 tourism-item">
+                <a href="/city.html?city=trieste" aria-label="Learn more about Trieste">
+                    <img src="/images/Trieste.jpg" alt="Trieste cityscape by the Adriatic Sea" loading="lazy">
+                </a>
+                <h4>Trieste</h4>
+                <p>Unveil a hidden gem where Italian, Austrian, and Slavic cultures blend by the Adriatic Sea.</p>
+                <a href="/city.html?city=trieste" class="btn-learn-more">Learn More</a>
+            </div>
+            <div class="col-md-4 tourism-item">
+                <a href="/city.html?city=venice" aria-label="Learn more about Venice">
+                    <img src="/images/Venezia.jpg" alt="Venice canals and gondolas" loading="lazy">
+                </a>
+                <h4>Venice</h4>
+                <p>Drift through a timeless city of canals, masked carnivals, and Venetian splendor.</p>
+                <a href="/city.html?city=venice" class="btn-learn-more">Learn More</a>
+            </div>
+            <div class="col-md-4 tourism-item">
+                <a href="/city.html?city=dolomites" aria-label="Learn more about the Dolomites">
+                    <img src="/images/Dolomites.jpg" alt="Dolomites mountain landscape" loading="lazy">
+                </a>
+                <h4>Dolomites</h4>
+                <p>Conquer jagged peaks and alpine wonders in Italy’s breathtaking mountain playground.</p>
+                <a href="/city.html?city=dolomites" class="btn-learn-more">Learn More</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 tourism-item">
+                <a href="/city.html?city=verona" aria-label="Learn more about Verona">
+                    <img src="/images/Verona.jpg" alt="Verona’s ancient Roman arena" loading="lazy">
+                </a>
+                <h4>Verona</h4>
+                <p>Step into Shakespeare’s romance with ancient arenas and star-crossed charm.</p>
+                <a href="/city.html?city=verona" class="btn-learn-more">Learn More</a>
+            </div>
+            <div class="col-md-4 tourism-item">
+                <a href="/city.html?city=cortina" aria-label="Learn more about Cortina d'Ampezzo">
+                    <img src="/images/cortina d'ampezzo.jpg" alt="Cortina d'Ampezzo ski resort" loading="lazy">
+                </a>
+                <h4>Cortina d'Ampezzo</h4>
+                <p>Ski or sip in style at the glamorous queen of the Dolomites.</p>
+                <a href="/city.html?city=cortina" class="btn-learn-more">Learn More</a>
+            </div>
+            <div class="col-md-4 tourism-item">
+                <a href="/city.html?city=ravenna" aria-label="Learn more about Ravenna">
+                    <img src="/images/Ravena.jpg" alt="Ravenna’s Byzantine mosaics" loading="lazy">
+                </a>
+                <h4>Ravenna</h4>
+                <p>Marvel at dazzling mosaics and Byzantine treasures in this historic coastal jewel.</p>
+                <a href="/city.html?city=ravenna" class="btn-learn-more">Learn More</a>
+            </div>
+        </div>
+    </div>
+   >
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    <!-- Cookie Consent Panel -->
+    <div id="cookie-consent-placeholder"></div>
+    <!-- Schema Markup for All Destinations -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Executive Venice Travel Blog",
+        "description": "Explore the best travel destinations in Venice and Northern Italy with Executive Venice.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Executive Venice",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.executive-venice.com/images/logo_black.png"
+            }
+        },
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Trieste",
+                "description": "Unveil a hidden gem where Italian, Austrian, and Slavic cultures blend by the Adriatic Sea.",
+                "image": "https://www.executive-venice.com/images/Trieste.jpg",
+                "url": "https://www.executive-venice.com/city.html?city=trieste",
+                "datePublished": "2025-01-01",
+                "dateModified": "2025-05-13",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Executive Venice"
+                }
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Venice",
+                "description": "Drift through a timeless city of canals, masked carnivals, and Venetian splendor.",
+                "image": "https://www.executive-venice.com/images/Venezia.jpg",
+                "url": "https://www.executive-venice.com/city.html?city=venice",
+                "datePublished": "2025-01-01",
+                "dateModified": "2025-05-13",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Executive Venice"
+                }
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Dolomites",
+                "description": "Conquer jagged peaks and alpine wonders in Italy’s breathtaking mountain playground.",
+                "image": "https://www.executive-venice.com/images/Dolomites.jpg",
+                "url": "https://www.executive-venice.com/city.html?city=dolomites",
+                "datePublished": "2025-01-01",
+                "dateModified": "2025-05-13",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Executive Venice"
+                }
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Verona",
+                "description": "Step into Shakespeare’s romance with ancient arenas and star-crossed charm.",
+                "image": "https://www.executive-venice.com/images/Verona.jpg",
+                "url": "https://www.executive-venice.com/city.html?city=verona",
+                "datePublished": "2025-01-01",
+                "dateModified": "2025-05-13",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Executive Venice"
+                }
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Cortina d'Ampezzo",
+                "description": "Ski or sip in style at the glamorous queen of the Dolomites.",
+                "image": "https://www.executive-venice.com/images/cortina d'ampezzo.jpg",
+                "url": "https://www.executive-venice.com/city.html?city=cortina",
+                "datePublished": "2025-01-01",
+                "dateModified": "2025-05-13",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Executive Venice"
+                }
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Ravenna",
+                "description": "Marvel at dazzling mosaics and Byzantine treasures in this historic coastal jewel.",
+                "image": "https://www.executive-venice.com/images/Ravena.jpg",
+                "url": "https://www.executive-venice.com/city.html?city=ravenna",
+                "datePublished": "2025-01-01",
+                "dateModified": "2025-05-13",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Executive Venice"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/scripts/script.js"></script>
+
+</body>
+</html>

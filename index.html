@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimized Title -->
+    <title>Luxury Limo Service in Venice | Executive Venice</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/logo_black.png"/>
+ <!-- Meta Description for SEO -->
+<meta name="description" content="Book luxury limo services in Venice with Executive Venice. Airport transfers, water taxis, limousine rentals, and private tours.">
+
+<!-- Keywords -->
+<meta name="keywords" content="luxury limo Venice, limousine rental service Venice, chauffeur service Venice, water taxi Venice, airport transfer Venice, private tours Venice, luxury car hire Venice, Venice private transportation, private driver Venice, premium limo service, Venice car service, luxury water limousine, VIP transport Venice, executive car rental, Venice sightseeing tours">
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Luxury Limo Service in Venice | Executive Venice">
+    <meta property="og:description" content="Premium limo and water taxi services in Venice. Book your luxury ride now!">
+    <meta property="og:image" content="https://www.executive-venice.com/images/logo_black.png">
+    <meta property="og:url" content="https://www.executive-venice.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.executive-venice.com/">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Language -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        @media (min-width: 768px) {
+            .banner-section .content p {
+                margin-top: 0; /* Removes the margin-top on screens 768px and larger */
+            }
+        }
+        /* Carousel-specific overrides */
+        #fleetCarousel .carousel-item {
+            padding: 0;
+        }
+        
+        #fleetCarousel .car-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 15px;
+        }
+
+        #fleetCarousel .car-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #fleetCarousel .car-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        #fleetCarousel .car-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        #fleetCarousel .car-info span i {
+            margin-right: 5px;
+        }
+
+        /* Enhanced carousel controls - Positioned on sides and moved down */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            color: #f18b24; /* Fallback color if --primary-color isn’t defined */
+            opacity: 0.7;
+            position: absolute;
+            top: 50%; /* Vertically center the controls */
+            transform: translateY(-50%);
+            margin-top: 180px; /* Move icons downward by 50px (adjust as needed) */
+            z-index: 10; /* Higher than cards to ensure visibility */
+        }
+
+        .carousel-control-prev {
+            margin-left: -120px; /* Position outside the left edge of the carousel */
+        }
+
+        .carousel-control-next {
+            margin-right: -120px; /* Position outside the right edge of the carousel */
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-image: none;
+            font-size: 2rem;
+            color: #007bff; /* Fallback color if --primary-color isn’t defined */
+        }
+
+        .carousel-control-prev-icon::before {
+            content: '❮';
+        }
+
+        .carousel-control-next-icon::before {
+            content: '❯';
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+
+        /* Ensure carousel container doesn’t clip controls */
+        #fleetCarousel {
+            position: relative;
+            overflow: visible; /* Prevent clipping of controls */
+        }
+
+        @media (max-width: 1200px) {
+            .carousel-control-prev {
+                margin-left: -70px;
+                margin-top: 150px;
+            }
+            .carousel-control-next {
+                margin-right: -70px;
+                margin-top: 150px;
+            }
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-control-prev {
+                margin-left: -50px;
+                margin-top: 150px;
+            }
+            .carousel-control-next {
+                margin-right: -50px;
+                margin-top: 150px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 10%;
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 50%;
+            }
+            .carousel-control-prev {
+                left: 5px; /* Inset slightly for small screens */
+            }
+            .carousel-control-next {
+                right: 5px; /* Inset slightly for small screens */
+            }
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 12%;
+            }
+            .carousel-control-prev {
+                left: 2px;
+            }
+            .carousel-control-next {
+                right: 2px;
+            }
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (min-width: 1900px) {
+            .carousel-control-prev {
+                margin-left: -200px;
+                margin-top: 250px;
+            }
+            .carousel-control-next {
+                margin-right: -200px;
+                margin-top: 250px;
+            }
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-control-prev {
+                margin-left: -40px;
+                margin-top: 450px;
+            }
+            .carousel-control-next {
+                margin-right: -40px;
+                margin-top: 450px;
+            }
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Cookie Consent Panel */
+        #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default, shown via JS */
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        #cookie-consent p {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+        }
+
+        #cookie-consent .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        #cookie-consent button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #cookie-consent #accept-cookies {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        #cookie-consent #decline-cookies {
+            background-color: #fff;
+            color: #333;
+        }
+
+        #cookie-consent button:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 576px) {
+            #cookie-consent {
+                padding: 10px;
+            }
+            #cookie-consent p {
+                font-size: 0.8rem;
+            }
+            #cookie-consent .buttons {
+                flex-direction: column;
+                gap: 5px;
+            }
+            #cookie-consent button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <div class="banner-section">
+            <div class="content">
+                <p style="margin-top: 20px;">Where Would You Like To Go?</p>
+                <h1>A New Class Of Luxury Limo Service</h1>
+                <a href="fleet.html" class="btn btn-outline-light">Our Services ></a>
+            </div>
+        </div>
+        
+        <div class="how-it-works" style="margin-top: 2rem;">
+            <h2 style="text-align: center;">How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <img src="/images/route.svg" alt="Create Your Route with Executive Venice" loading="lazy">
+                    <h3>Create Your Route</h3>
+                    <p>Enter your pickup & dropoff locations or the number of hours you wish to book a car and driver for</p>
+                </div>
+                <span class="arrow">→</span>
+                <div class="step">
+                    <img src="/images/vehicle.svg" alt="Book Your Chauffeur in Venice" loading="lazy">
+                    <h3>Book your chauffeur</h3>
+                    <p>You can easily make a reservation through our website, mobile app, or by contacting our customer service team.</p>
+                </div>
+                <span class="arrow">→</span>
+                <div class="step">
+                    <img src="/images/like.svg" alt="Receive Confirmation for Your Venice Limo" loading="lazy">
+                    <h3>Receive a confirmation</h3>
+                    <p>Your booking is received, you'll receive a confirmation email or notification with all the details of your reservation.</p>
+                </div>
+            </div>
+        </div>
+
+ <div class="our-services" style="margin-top: -40px;">
+    <h2 class="text-center mb-4">Our Exclusive Experiences</h2>
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card h-100 service-item" style="width: 100%; max-width: 450px; padding: 10px; border: none;">
+                <img src="/images/new-venice-3.jpg" class="card-img-top" alt="Travel Transfer Services in Venice" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">Effortless Arrivals</h3>
+                    <p class="card-text">Glide from airport to hotel with our seamless, stress-free transfer service.</p>
+                    <a href="blog.html" class="btn btn-link">Learn More >></a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card h-100 service-item" style="width: 100%; max-width: 450px; padding: 10px; border: none;">
+                <img src="/images/tourist-cruise-transfer-Venezia.jpeg" class="card-img-top" alt="Wedding Transportation in Venice" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">Direct Cruise Ship Transfer</h3>
+                    <p class="card-text">Enjoy seamless transfers from your Venice hotel to cruise ports in comfort and style.</p>
+                    <a href="blog.html" class="btn btn-link">Learn More >></a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card h-100 service-item" style="width: 100%; max-width: 450px; padding: 10px; border: none;">
+                <img src="/images/service5.jpg" class="card-img-top" alt="Sprinter Class Limo in Venice" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">Business-Class Transfer</h3>
+                    <p class="card-text">Where first-class air travel meets five-star ground service.</p>
+                    <a href="blog.html" class="btn btn-link">Learn More >></a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card h-100 service-item" style="width: 100%; max-width: 450px; padding: 10px; border: none;">
+                <img src="/images/veneto.jpg" class="card-img-top" alt="Private Tours in Veneto and Venice" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">Venice & Veneto Adventures</h3>
+                    <p class="card-text">Discover hidden gems with private tours and effortless transfers.</p>
+                    <a href="blog.html" class="btn btn-link">Learn More >></a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card h-100 service-item" style="width: 100%; max-width: 450px; padding: 10px; border: none;">
+                <img src="/images/new-venice.jpg" class="card-img-top" alt="Water Limousine Service in Venice" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">Venice Water Taxi</h3>
+                    <p class="card-text">Sail through Venice in a luxurious water limo tailored to your desires.</p>
+                    <a href="blog.html" class="btn btn-link">Learn More >></a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+            <div class="card h-100 service-item" style="width: 100%; max-width: 450px; padding: 10px; border: none;">
+                <img src="/images/vip_airport_welcome.jpg" class="card-img-top" alt="Meet and Greet Airport Service in Venice" loading="lazy">
+                <div class="card-body">
+                    <h3 class="card-title">VIP Airport Transfer</h3>
+                    <p class="card-text">Premium airport meet & greet and luxury transfers with multilingual chauffeurs.</p>
+                    <a href="blog.html" class="btn btn-link">Learn More >></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <section class="our-fleet" style="margin-bottom: 2rem;">
+            <div class="header">
+                <h2>Our Fleet</h2>
+            </div>
+            <div id="fleetCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="car-card">
+                                    <h3>Mercedes E-Class</h3>
+                                    <p>Business Sedan</p>
+                                    <img src="/images/3.png" alt="Mercedes E-Class Business Sedan in Venice" class="car-image" loading="lazy">
+                                    <div class="car-info">
+                                        <span><i class="bi bi-person-fill"></i> 3</span>
+                                        <span><i class="bi bi-briefcase-fill"></i> 3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="car-card">
+                                    <h3>Mercedes S-Class</h3>
+                                    <p>Luxury Sedan</p>
+                                    <img src="/images/4.png" alt="Mercedes S-Class Luxury Sedan in Venice" class="car-image" loading="lazy">
+                                    <div class="car-info">
+                                        <span><i class="bi bi-person-fill"></i> 3</span>
+                                        <span><i class="bi bi-briefcase-fill"></i> 3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="car-card">
+                                    <h3>Business Van</h3>
+                                    <p>Mercedes V-Class</p>
+                                    <img src="/images/5.png" alt="Mercedes V-Class Business Van in Venice" class="car-image" loading="lazy">
+                                    <div class="car-info">
+                                        <span><i class="bi bi-person-fill"></i> 7</span>
+                                        <span><i class="bi bi-briefcase-fill"></i> 7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="car-card">
+                                    <h3>Business Van XL</h3>
+                                    <p>Mercedes Sprinter</p>
+                                    <img src="/images/7.png" alt="Mercedes Sprinter Business Van XL in Venice" class="car-image" loading="lazy">
+                                    <div class="car-info">
+                                        <span><i class="bi bi-person-fill"></i> 8</span>
+                                        <span><i class="bi bi-briefcase-fill"></i> 8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="car-card">
+                                    <h3>Standard Boat M-1</h3>
+                                    <p>Fiber Glass Boat</p>
+                                    <img src="/images/fiber boat.jpeg" alt="Standard Fiber Glass Boat M-1 in Venice" class="car-image" loading="lazy">
+                                    <div class="car-info">
+                                        <span><i class="bi bi-person-fill"></i> 8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="car-card">
+                                    <h3>Deluxe Boat M-3</h3>
+                                    <p>Wooden Boat</p>
+                                    <img src="/images/m3.png" alt="Deluxe Wooden Boat M-3 in Venice" class="car-image" loading="lazy">
+                                    <div class="car-info">
+                                        <span><i class="bi bi-person-fill"></i> 8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#fleetCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#fleetCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Cookie Consent Panel -->
+    <div id="cookie-consent-placeholder"></div>
+
+
+
+    <!-- Schema Markup for Local Business -->
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Executive Venice",
+  "description": "Luxury limo and water taxi services in Venice, Italy.",
+  "url": "https://executive-venice.com/",
+  "telephone": "+393289699968",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Corso del Popolo, 89",
+    "addressLocality": "Venezia",
+    "addressRegion": "VE",
+    "postalCode": "30172",
+    "addressCountry": "IT"
+  },
+  "image": "https://executive-venice.com/images/logo.jpg",
+  "sameAs": [
+    "https://www.instagram.com/executive_venice/"
+  ],
+  "openingHours": "Mo-Su 08:00-22:00"
+}
+</script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>

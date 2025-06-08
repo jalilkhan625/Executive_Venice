@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EV - Redefining Premium Electric Mobility" />
+  <title>EV Navigation</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <style>
+   @media (max-width: 1024px) {
+  .language-dropdown {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+    .navbar-custom {
+        background: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem 3rem;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar-custom.scrolled {
+        background: linear-gradient(135deg, #00040d 0%, #00030a 100%);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #000;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-custom.scrolled .navbar-brand {
+        color: #f1f5f9;
+    }
+
+    .brand-logo {
+        width: 100px; /* Increased logo size */
+        height: 100px;
+        margin-right: 0.5rem;
+    }
+
+    .brand-subtext {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.9rem;
+        color: #000;
+        margin-left: 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-custom.scrolled .brand-subtext {
+        color: #cbd5e1;
+    }
+
+    .nav-link {
+        font-family: 'DM Sans', sans-serif;
+        color: #000;
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding: 0.75rem 1.25rem;
+        transition: color 0.3s ease, transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--primary-color, #f97316);
+        transform: translateY(-2px);
+    }
+
+    /* Desktop styles: Rounded button style for large screens (>1024px) when scrolled */
+    @media (min-width: 1025px) {
+        .navbar-custom.scrolled .nav-link {
+            color: #e2e8f0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 0.5rem 1.25rem;
+            margin: 0 0.25rem;
+        }
+
+        .navbar-custom.scrolled .nav-link:hover {
+            background-color: var(--primary-color, #f97316);
+            color: #ffffff !important;
+            box-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+        }
+    }
+
+    /* Mobile menu styles: Apply up to 1024px */
+    @media (max-width: 1024px) {
+        .navbar-custom {
+            padding: 1rem 1.5rem;
+        }
+
+        .navbar-custom .nav-link {
+            color: #000;
+            text-align: center;
+            padding: 0.75rem 1rem;
+        }
+
+        .navbar-custom.scrolled .nav-link {
+            color: #ffffff;
+        }
+
+        .navbar-custom .nav-link:hover {
+            background-color: transparent;
+            color: var(--primary-color, #f97316);
+            box-shadow: none;
+            transform: translateY(-2px);
+        }
+
+        .navbar-custom.scrolled .nav-link:hover {
+            color: var(--primary-color, #f97316);
+            background-color: transparent;
+            box-shadow: none;
+            transform: translateY(-2px);
+        }
+
+        .phone-link {
+            justify-content: center;
+            margin: 0.5rem auto;
+            width: 100%;
+            display: flex;
+        }
+
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+        .lang-btn {
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+        }
+
+        .cta-btn {
+            display: block;
+            margin: 0.5rem auto;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .navbar-custom.scrolled .navbar-toggler-icon {
+            background-image: none;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            border: 2px solid #ffffff;
+            border-radius: 4px;
+        }
+
+        .navbar-custom.scrolled .navbar-toggler-icon::before {
+            content: '\2630';
+            color: #ffffff;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .phone-link {
+        color: #000;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1.1rem;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-custom.scrolled .phone-link {
+        color: #f1f5f9;
+    }
+
+    .phone-link:hover {
+        color: var(--primary-color, #facc15);
+    }
+
+    .phone-link span {
+        font-size: 1rem;
+    }
+
+    .lang-btn {
+        background: rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        color: #000;
+        font-family: 'DM Sans', sans-serif;
+        padding: 0.5rem 1.25rem;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+    }
+
+    .navbar-custom.scrolled .lang-btn {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #f1f5f9;
+    }
+
+    .lang-btn:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    .lang-flag {
+        width: 20px;
+        margin-right: 0.5rem;
+    }
+
+    .language-dropdown {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        padding: 0.5rem 0;
+        min-width: 180px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1000;
+        display: none;
+    }
+
+    .language-dropdown.show {
+        display: block;
+    }
+
+    .lang-option {
+        color: #1e3a8a;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        transition: background 0.3s ease;
+    }
+
+    .lang-option:hover {
+        background: #f0f4ff;
+    }
+
+    .cta-btn {
+        background: #facc15;
+        color: #0f172a;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .cta-btn:hover {
+        background: #eab308;
+        transform: scale(1.05);
+    }
+
+    /* Very small screens: Optimize spacing */
+    @media (max-width: 576px) {
+        .navbar-custom {
+            padding: 0.8rem 1rem;
+        }
+
+        .navbar-brand {
+            font-size: 1.6rem;
+        }
+
+        .brand-subtext {
+            font-size: 0.75rem;
+        }
+
+        .brand-logo {
+            width: 40px; /* Slightly smaller logo on very small screens */
+            height: 40px;
+        }
+
+        .phone-link {
+            margin-right: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .phone-link span {
+            font-size: 0.85rem;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+        }
+
+        .cta-btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
+
+        .nav-link {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html" aria-label="X Home">
+          <img src="/images/logo_black.png" alt="X Logo" class="brand-logo" />
+          <span class="brand-subtext d-none d-lg-inline">Redefining Mobility</span>
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="fleet.html">Fleet</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Right Side: Phone + Language -->
+          <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center position-relative">
+            <a href="tel:+393289699968" class="nav-link phone-link" aria-label="Call us at +39 392 591 6888">
+              <i class="bi bi-telephone-fill me-2"></i>
+              <span>+39 392 591 6888</span>
+            </a>
+
+            <!-- Language Selector -->
+            <div class="language-selector position-relative">
+              <button class="lang-btn" id="langToggle" type="button" aria-haspopup="true" aria-expanded="false">
+                <img src="https://flagcdn.com/w20/gb.png" alt="English" class="lang-flag">
+                <span>EN</span>
+                <i class="bi bi-chevron-down ms-2"></i>
+              </button>
+              <div class="language-dropdown" id="languageDropdown" aria-label="Language options">
+                <a href="#" class="lang-option" data-lang="ar">
+                  <img src="https://flagcdn.com/w20/sa.png" alt="Arabic" class="lang-flag"> Arabic
+                </a>
+                <a href="#" class="lang-option" data-lang="zh-CN">
+                  <img src="https://flagcdn.com/w20/cn.png" alt="Chinese" class="lang-flag"> Chinese
+                </a>
+                <a href="#" class="lang-option" data-lang="nl">
+                  <img src="https://flagcdn.com/w20/nl.png" alt="Dutch" class="lang-flag"> Dutch
+                </a>
+                <a href="#" class="lang-option" data-lang="it">
+                  <img src="https://flagcdn.com/w20/it.png" alt="Italian" class="lang-flag"> Italian
+                </a>
+                <a href="#" class="lang-option" data-lang="pl">
+                  <img src="https://flagcdn.com/w20/pl.png" alt="Polish" class="lang-flag"> Polish
+                </a>
+                <a href="#" class="lang-option" data-lang="ru">
+                  <img src="https://flagcdn.com/w20/ru.png" alt="Russian" class="lang-flag"> Russian
+                </a>
+                <a href="#" class="lang-option" data-lang="es">
+                  <img src="https://flagcdn.com/w20/es.png" alt="Spanish" class="lang-flag"> Spanish
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <script src="/scripts/script.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>

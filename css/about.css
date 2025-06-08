@@ -1,0 +1,640 @@
+/* /css/about.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #F5F5F5;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Navbar Placeholder */
+#navbar-placeholder {
+    position: relative;
+    z-index: 10;
+    background-color: #f8f9fa;
+    min-height: 60px;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 600px; /* Allow flexibility for image */
+    background-color: #ccc; /* Fallback */
+    z-index: 1;
+    margin-top: 80px; /* Space below navbar */
+}
+
+.hero-image {
+    width: 100%;
+    height: auto; /* Let image determine height */
+    display: block; /* Ensure it renders naturally */
+    object-fit: cover; /* Maintain aspect ratio */
+    max-height: 600px; /* Cap height if needed */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; /* Start at the top */
+    left: 0; /* Start at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height to cover image */
+    display: flex; /* Use flex to center content */
+    flex-direction: column;
+    justify-content: center; /* Vertically center text */
+    align-items: center; /* Horizontally center text */
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(44, 122, 123, 0.5), rgba(0, 0, 0, 0.3));
+    z-index: 2; /* Above image */
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 120px 20px 60px 20px;
+    background-color: #fff;
+    text-align: left;
+    display: block; /* Ensure visibility */
+}
+
+.intro-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-header {
+    margin-bottom: 30px;
+}
+
+.intro-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.intro-section p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    color: #606d71;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.features-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+.features-list li {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 35px;
+    color: #1c2526;
+}
+
+.features-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('/images/tick.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2C7A7B;
+    border-radius: 50%;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cta-button.primary-cta {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #2C7A7B;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button.primary-cta:hover {
+    background-color: #236263;
+    transform: translateY(-3px);
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #F5F5F5 0%, #E8ECEF 100%);
+}
+
+.reviews-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #2C7A7B;
+    border-radius: 2px;
+}
+
+.elfsight-app-e334e476-d51c-4c33-9466-660022d86cfe {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.benefits-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefits-section .section-title {
+    margin-bottom: 50px;
+}
+
+.benefit-card {
+    padding: 30px 20px;
+    background: linear-gradient(145deg, #F5F5F5, #FFFFFF);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.benefit-card h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #666;
+    max-width: 250px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    background-color: #1c2526;
+    color: #fff;
+    padding: 40px 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.how-it-works-section .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.how-it-works-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #fff;
+}
+
+.how-it-works-section .step-list {
+    position: relative;
+    padding-left: 40px;
+}
+
+.how-it-works-section .step {
+    position: relative;
+    margin-bottom: 30px;
+    cursor: pointer;
+    min-height: 60px;
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    opacity: 1;
+    color: #fff;
+}
+
+.how-it-works-section .step::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 24px;
+    width: 2px;
+    height: calc(100% + 30px);
+    background-color: #606d71;
+    z-index: 1;
+}
+
+.how-it-works-section .step.active::before {
+    background-color: #f04e44;
+}
+
+.how-it-works-section .step:last-child::before {
+    height: 0;
+}
+
+.how-it-works-section .step .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #606d71;
+    background-color: #1c2526;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-it-works-section .step .icon::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.how-it-works-section .step.active .icon {
+    border-color: #f04e44;
+    background-color: #f04e44;
+}
+
+.how-it-works-section .step h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    color: #fff;
+}
+
+.how-it-works-section .step p {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 0;
+    margin-left: 40px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.how-it-works-section .step p.no-break {
+    white-space: nowrap;
+    width: auto;
+}
+
+.how-it-works-section .image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.how-it-works-section .image-slider .image-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.how-it-works-section .image-slider img {
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: 450px;
+    }
+
+    .hero-image {
+        max-height: 450px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1rem;
+    }
+
+    .intro-section {
+        padding: 100px 15px 40px 15px;
+    }
+
+    .intro-section h2 {
+        font-size: 2rem;
+    }
+
+    .intro-section p {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .features-list {
+        max-width: 100%;
+    }
+
+    .features-list li {
+        font-size: 0.95rem;
+    }
+
+    .reviews-section {
+        padding: 60px 15px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .benefits-section {
+        padding: 60px 15px;
+    }
+
+    .benefits-section .section-title {
+        font-size: 2.2rem;
+    }
+
+    .how-it-works-section {
+        padding: 30px 15px;
+    }
+
+    .how-it-works-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .how-it-works-section .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: 350px;
+    }
+
+    .hero-image {
+        max-height: 350px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .intro-section {
+        padding: 80px 10px 30px 10px;
+    }
+
+    .intro-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .intro-section p {
+        font-size: 0.9rem;
+    }
+
+    .features-list li {
+        font-size: 0.9rem;
+        padding-left: 30px;
+    }
+
+    .features-list li::before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cta-button.primary-cta {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .reviews-section {
+        padding: 40px 10px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title::before {
+        width: 40px;
+    }
+
+    .benefits-section {
+        padding: 40px 10px;
+    }
+
+    .benefits-section .section-title {
+        font-size: 1.8rem;
+    }
+
+    .benefit-card {
+        padding: 20px 15px;
+    }
+
+    .benefit-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .benefit-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .benefit-card p {
+        font-size: 0.9rem;
+    }
+
+    .how-it-works-section {
+        padding: 20px 10px;
+    }
+
+    .how-it-works-section h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .how-it-works-section .step h4 {
+        font-size: 1.1rem;
+    }
+
+    .how-it-works-section .step p {
+        font-size: 0.85rem;
+    }
+
+    .how-it-works-section .step p.no-break {
+        width: auto;
+    }
+
+    .how-it-works-section .image-slider {
+        margin-top: 0;
+    }
+}
+/* Existing code for how-it-works-section remains unchanged until media queries */
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .how-it-works-section {
+        padding: 30px 15px;
+    }
+
+    .how-it-works-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .how-it-works-section .step-list {
+        padding-left: 30px; /* Reduced from 40px */
+    }
+
+    .how-it-works-section .step h4 {
+        margin-left: 30px; /* Reduced from 40px */
+        font-size: 1.15rem;
+    }
+
+    .how-it-works-section .step p {
+        margin-left: 30px; /* Reduced from 40px */
+        font-size: 0.9rem;
+    }
+
+    .how-it-works-section .step p.no-break {
+        white-space: normal; /* Allow wrapping on smaller screens */
+    }
+
+    .how-it-works-section .step::before {
+        left: 8px; /* Adjusted from 11px for tighter alignment */
+    }
+
+    .how-it-works-section .step .icon {
+        left: -3px; /* Adjusted to align with reduced padding */
+    }
+}
+
+@media (max-width: 767px) {
+    .how-it-works-section {
+        padding: 20px 10px;
+    }
+
+    .how-it-works-section h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .how-it-works-section .step-list {
+        padding-left: 25px; /* Further reduced for very small screens */
+    }
+
+    .how-it-works-section .step {
+        margin-bottom: 25px;
+    }
+
+    .how-it-works-section .step h4 {
+        margin-left: 25px; /* Reduced from 40px */
+        font-size: 1.1rem;
+    }
+
+    .how-it-works-section .step p {
+        margin-left: 25px; /* Reduced from 40px */
+        font-size: 0.85rem;
+    }
+
+    .how-it-works-section .step p.no-break {
+        white-space: normal; /* Ensure text wraps */
+        width: 100%; /* Override any fixed width */
+    }
+
+    .how-it-works-section .step::before {
+        left: 6px; /* Further adjusted */
+    }
+
+    .how-it-works-section .step .icon {
+        left: -2px; /* Adjusted for alignment */
+        width: 20px; /* Smaller icon for small screens */
+        height: 20px;
+    }
+
+    .how-it-works-section .step .icon::after {
+        width: 6px; /* Smaller dot inside icon */
+        height: 6px;
+    }
+}

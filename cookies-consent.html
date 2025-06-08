@@ -1,0 +1,75 @@
+<!-- cookie-consent.html -->
+<style>
+    #cookie-consent {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        color: #fff;
+        padding: 15px 20px;
+        z-index: 1000;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        display: none; /* Hidden by default, shown via JS */
+        font-family: 'DM Sans', sans-serif;
+      
+    }
+
+    #cookie-consent p {
+        margin: 0 0 10px 0;
+        font-size: 0.9rem;
+    }
+
+    #cookie-consent .buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    #cookie-consent button {
+        padding: 8px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #cookie-consent #accept-cookies {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    #cookie-consent #decline-cookies {
+        background-color: #fff;
+        color: #333;
+    }
+
+    #cookie-consent button:hover {
+        opacity: 0.9;
+    }
+
+    @media (max-width: 576px) {
+        #cookie-consent {
+            padding: 10px;
+        }
+        #cookie-consent p {
+            font-size: 0.8rem;
+        }
+        #cookie-consent .buttons {
+            flex-direction: column;
+            gap: 5px;
+        }
+        #cookie-consent button {
+            width: 100%;
+        }
+    }
+</style>
+
+<div id="cookie-consent">
+    <p>We use cookies to enhance your browsing experience and analyze site traffic. By clicking "Accept," you consent to our use of cookies. <a href="https://business.safety.google/privacy/" style="color: #007bff;">Learn more</a></p>
+    <div class="buttons">
+        <button id="accept-cookies">Accept</button>
+        <button id="decline-cookies">Decline</button>
+    </div>
+</div>

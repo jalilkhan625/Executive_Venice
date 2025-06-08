@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Fleet - Executive Venice | Luxury Transport</title>
+    <meta name="description" content="Explore Executive Venice's premium fleet of luxury vehicles and boats, including Mercedes E-Class, S-Class, V-Class, Sprinter, and deluxe boats for transport in Venice and Northern Italy.">
+    <meta name="keywords" content="premium fleet, Venice luxury transport, Mercedes E-Class, Mercedes S-Class, Mercedes V-Class, Mercedes Sprinter, deluxe boats, Executive Venice">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Executive Venice">
+    <link rel="canonical" href="https://www.executive-venice.com/fleet.html">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Premium Fleet - Executive Venice">
+    <meta property="og:description" content="Discover Executive Venice's luxury fleet, including Mercedes E-Class, S-Class, V-Class, Sprinter, and deluxe boats for premium transport in Venice.">
+    <meta property="og:image" content="https://www.executive-venice.com/images/fleet-preview.jpg">
+    <meta property="og:url" content="https://www.executive-venice.com/fleet.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Executive Venice">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+         
+        /* Media query for tablets and larger screens (576px and up) */
+@media (min-width: 576px) {
+    .fleet-section h1 {
+        margin-top: 5rem !important; /* Increased top margin for tablets and up */
+    }
+}
+
+/* Media query for desktops (992px and up) */
+@media (min-width: 992px) {
+    .fleet-section h1 {
+        margin-top: 6rem !important; /* Slightly larger for desktops */
+    }
+}
+        .fleet-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+        }
+
+        .car-card {
+            border: none;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .car-image {
+            border-radius: 8px;
+            transition: opacity 0.3s ease;
+            loading: lazy; /* For SEO/performance */
+        }
+
+        .car-image:hover {
+            opacity: 0.9;
+        }
+
+        .car-info i {
+            font-size: 1.1rem;
+            color: #007bff;
+        }
+
+        .load-more-btn {
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .load-more-btn:hover {
+            background: linear-gradient(90deg, #0056b3, #003d82);
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .car-item {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        /* Media query for tablets and small laptops (576px to 992px) */
+        @media (min-width: 576px) and (max-width: 992px) {
+            .car-image {
+                max-width: 75%; /* Uniform size for all images */
+            }
+        }
+
+        /* Media query for mobile screens */
+        @media (max-width: 576px) {
+            .car-image {
+                max-width: 100%; /* Full width for mobile */
+            }
+        }
+        /* Cookie Consent Panel */
+        #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default, shown via JS */
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        #cookie-consent p {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+        }
+
+        #cookie-consent .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        #cookie-consent button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #cookie-consent #accept-cookies {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        #cookie-consent #decline-cookies {
+            background-color: #fff;
+            color: #333;
+        }
+
+        #cookie-consent button:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 576px) {
+            #cookie-consent {
+                padding: 10px;
+            }
+            #cookie-consent p {
+                font-size: 0.8rem;
+            }
+            #cookie-consent .buttons {
+                flex-direction: column;
+                gap: 5px;
+            }
+            #cookie-consent button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder" class="bg-light py-3"></div>
+
+    <div class="container fleet-section py-3 py-md-5 pt-5 pt-md-5">
+        <h1 class="text-center mb-4 mt-4 mt-md-5">Our Premium Fleet</h1>
+        <div class="row gy-4" id="carContainer">
+            <!-- Car 3 -->
+            <div class="col-md-6 col-sm-12 car-item">
+                <div class="car-card p-3 d-flex flex-column">
+                    <h3 class="fs-5 fw-semibold text-dark mb-2 text-center">Mercedes E-Class</h3>
+                    <p class="text-muted small mb-3 text-center">Business Sedan</p>
+                    <img src="/images/3.png" alt="Mercedes E-Class luxury sedan" class="car-image img-fluid mx-auto w-75 mb-3" loading="lazy">
+                    <div class="car-info d-flex justify-content-center align-items-center gap-3 text-dark small">
+                        <span><i class="fas fa-users me-1"></i> Passengers: 3</span>
+                        <span><i class="fas fa-suitcase me-1"></i> Luggage: 3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 4 -->
+            <div class="col-md-6 col-sm-12 car-item">
+                <div class="car-card p-3 d-flex flex-column">
+                    <h3 class="fs-5 fw-semibold text-dark mb-2 text-center">Mercedes S-Class</h3>
+                    <p class="text-muted small mb-3 text-center">Luxury Sedan</p>
+                    <img src="/images/4.png" alt="Mercedes S-Class luxury sedan" class="car-image img-fluid mx-auto w-75 mb-3" loading="lazy">
+                    <div class="car-info d-flex justify-content-center align-items-center gap-3 text-dark small">
+                        <span><i class="fas fa-users me-1"></i> Passengers: 3</span>
+                        <span><i class="fas fa-suitcase me-1"></i> Luggage: 3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 5 -->
+            <div class="col-md-6 col-sm-12 car-item">
+                <div class="car-card p-3 d-flex flex-column">
+                    <h3 class="fs-5 fw-semibold text-dark mb-2 text-center">Business Van</h3>
+                    <p class="text-muted small mb-3 text-center">Mercedes V-Class</p>
+                    <img src="/images/5.png" alt="Mercedes V-Class business van" class="car-image img-fluid mx-auto w-75 mb-3" loading="lazy">
+                    <div class="car-info d-flex justify-content-center align-items-center gap-3 text-dark small">
+                        <span><i class="fas fa-users me-1"></i> Passengers: 7</span>
+                        <span><i class="fas fa-suitcase me-1"></i> Luggage: 7</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 6 -->
+            <div class="col-md-6 col-sm-12 car-item">
+                <div class="car-card p-3 d-flex flex-column">
+                    <h3 class="fs-5 fw-semibold text-dark mb-2 text-center">Business Van XL</h3>
+                    <p class="text-muted small mb-3 text-center">Mercedes Sprinter</p>
+                    <img src="/images/7.png" alt="Mercedes Sprinter business van XL" class="car-image img-fluid mx-auto w-75 mb-3" loading="lazy">
+                    <div class="car-info d-flex justify-content-center align-items-center gap-3 text-dark small">
+                        <span><i class="fas fa-users me-1"></i> Passengers: 8</span>
+                        <span><i class="fas fa-suitcase me-1"></i> Luggage: 8</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 8 (Hidden Initially) -->
+            <div class="col-md-6 col-sm-12 car-item">
+                <div class="car-card p-3 d-flex flex-column">
+                    <h3 class="fs-5 fw-semibold text-dark mb-2 text-center">Standard Boat M-1</h3>
+                    <p class="text-muted small mb-3 text-center">Fiber Glass Boat</p>
+                    <img src="/images/fiber boat.jpeg" alt="Standard fiber glass boat M-1" class="car-image img-fluid mx-auto w-75 mb-3" loading="lazy">
+                    <div class="car-info d-flex justify-content-center align-items-center gap-3 text-dark small">
+                        <span><i class="fas fa-users me-1"></i> Passengers: 8</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 9 (Hidden Initially) -->
+            <div class="col-md-6 col-sm-12 car-item">
+                <div class="car-card p-3 d-flex flex-column">
+                    <h3 class="fs-5 fw-semibold text-dark mb-2 text-center">Deluxe Boat M-3</h3>
+                    <p class="text-muted small mb-3 text-center">Wooden Boat</p>
+                    <img src="/images/m3.png" alt="Deluxe wooden boat M-3" class="car-image img-fluid mx-auto w-75 mb-3" loading="lazy">
+                    <div class="car-info d-flex justify-content-center align-items-center gap-3 text-dark small">
+                        <span><i class="fas fa-users me-1"></i> Passengers: 8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div id="footer-placeholder"></div>
+
+    <!-- Cookie Consent Panel -->
+    <div id="cookie-consent-placeholder"></div>
+
+    <!-- Schema Markup for Fleet -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Executive Venice Premium Fleet",
+        "description": "A collection of luxury vehicles and boats offered by Executive Venice for premium transport in Venice and Northern Italy.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Executive Venice",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.executive-venice.com/images/logo_black.png"
+            }
+        },
+        "itemListElement": [
+            {
+                "@type": "Product",
+                "name": "Mercedes E-Class",
+                "description": "Business Sedan with capacity for 3 passengers and 3 pieces of luggage.",
+                "image": "https://www.executive-venice.com/images/3.png",
+                "url": "https://www.executive-venice.com/fleet.html",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Mercedes-Benz"
+                }
+            },
+            {
+                "@type": "Product",
+                "name": "Mercedes S-Class",
+                "description": "Luxury Sedan with capacity for 3 passengers and 3 pieces of luggage.",
+                "image": "https://www.executive-venice.com/images/4.png",
+                "url": "https://www.executive-venice.com/fleet.html",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Mercedes-Benz"
+                }
+            },
+            {
+                "@type": "Product",
+                "name": "Mercedes V-Class",
+                "description": "Business Van with capacity for 7 passengers and 7 pieces of luggage.",
+                "image": "https://www.executive-venice.com/images/5.png",
+                "url": "https://www.executive-venice.com/fleet.html",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Mercedes-Benz"
+                }
+            },
+            {
+                "@type": "Product",
+                "name": "Mercedes Sprinter",
+                "description": "Business Van XL with capacity for 8 passengers and 8 pieces of luggage.",
+                "image": "https://www.executive-venice.com/images/7.png",
+                "url": "https://www.executive-venice.com/fleet.html",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Mercedes-Benz"
+                }
+            },
+            {
+                "@type": "Product",
+                "name": "Standard Boat M-1",
+                "description": "Fiber Glass Boat with capacity for 8 passengers.",
+                "image": "https://www.executive-venice.com/images/fiber boat.jpeg",
+                "url": "https://www.executive-venice.com/fleet.html",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Executive Venice"
+                }
+            },
+            {
+                "@type": "Product",
+                "name": "Deluxe Boat M-3",
+                "description": "Wooden Boat with capacity for 8 passengers.",
+                "image": "https://www.executive-venice.com/images/m3.png",
+                "url": "https://www.executive-venice.com/fleet.html",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Executive Venice"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/script.js"></script>
+
+</body>
+</html>

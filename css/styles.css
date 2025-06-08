@@ -1,0 +1,496 @@
+/* css/custom.css */
+:root {
+    --primary-color: #dc3545;
+    --spacing-unit: 1rem;
+    --font-family-main: "DM Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: var(--font-family-main);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    height: 100%;
+}
+
+/* Main Container */
+main.main-container {
+    flex: 1;
+    padding: 5vw;
+    border-radius: 15px;
+    font-family: var(--font-family-main);
+}
+
+/* Banner Section */
+.banner-section {
+    position: relative;
+    min-height: 80vh;
+    background: url('/images/banner4.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 2rem;
+    font-family: var(--font-family-main);
+}
+
+.banner-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    border-radius: 15px;
+}
+
+.banner-section .content {
+    z-index: 1;
+    text-align: center;
+}
+
+.banner-section h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.banner-section p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    opacity: 0;
+    transition: opacity 0.5s ease 0.3s;
+}
+
+.banner-section .btn {
+    padding: 0.8rem 1.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.3s;
+}
+
+.banner-section .booking-widget {
+    position: static;
+    width: 90%;
+    max-width: 300px;
+    margin: 2rem auto;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.3s;
+}
+
+.banner-section.visible h1 {
+    opacity: 1;
+}
+
+.banner-section.visible p,
+.banner-section.visible .btn,
+.banner-section.visible .booking-widget {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .banner-section {
+        min-height: 90vh;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .banner-section .booking-widget {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 300px;
+        margin: 0;
+    }
+    .banner-section .content {
+        text-align: left;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-section {
+        padding: 2rem;
+    }
+    .banner-section h1 {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+    }
+    .banner-section p {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+}
+
+/* How It Works */
+.how-it-works {
+    margin-top: 2rem;
+    padding: 5vw;
+    text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    font-family: var(--font-family-main);
+}
+
+.how-it-works h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.step {
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease 0.3s;
+    opacity: 0;
+    width: 100%; /* Full width for mobile and tablets */
+}
+
+.step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.how-it-works.visible h2 {
+    opacity: 1;
+}
+
+.how-it-works.visible .step {
+    opacity: 1;
+}
+
+.step img {
+    max-width: 100%;
+    height: auto;
+}
+
+.step h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 767px) {
+    .arrow {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .steps-container {
+        flex-direction: column; /* One card per row for tablets */
+        gap: 20px;
+    }
+    .step {
+        width: 100%; /* Full width for tablets */
+        max-width: none; /* Remove max-width constraint */
+    }
+    .arrow {
+        display: none; /* Hide arrows for tablet layout */
+    }
+}
+
+@media (min-width: 992px) {
+    .steps-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .step {
+        flex: 1;
+        max-width: 30%; /* Three cards per row for larger screens */
+    }
+    .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #000000;
+        border-radius: 50%;
+        color: #000000;
+        text-align: center;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .steps-container {
+        gap: 15px;
+    }
+    .step {
+        padding: 15px;
+    }
+}
+
+/* Our Services */
+.our-services {
+    padding: 5vw;
+    text-align: center;
+    background: #fff;
+    border-radius: 15px;
+    margin-top: -20px;
+    font-family: var(--font-family-main);
+}
+
+.our-services .card {
+    border: none; /* Ensure no border on card */
+}
+
+.our-services h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.service-item {
+    display: block;
+    width: 100%;
+    margin: 2rem 0;
+    text-align: left;
+    transition: transform 0.3s ease, opacity 0.5s ease 0.3s;
+    opacity: 0;
+    border: none; /* Explicitly remove border */
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: none;
+}
+
+.our-services.visible h2 {
+    opacity: 1;
+}
+
+.our-services.visible .service-item {
+    opacity: 1;
+}
+
+.service-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: none; /* Ensure no border on image */
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.service-item p {
+    color: #666;
+}
+
+.service-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .our-services .service-item {
+        display: inline-block;
+        width: 45%; /* Increased from 31% to 45% for wider cards */
+        margin: 0 1%; /* Maintain margin for spacing */
+    }
+}
+
+@media (min-width: 992px) {
+    .our-services .service-item {
+        display: inline-block;
+        width: 95%; /* Increased from 90% to 95% for wider cards on laptops */
+        margin: 0 0.25%; /* Reduced margin to fit wider cards */
+    }
+}
+
+/* Mobile screens: Reduce gap between cards */
+@media (max-width: 767px) {
+    .our-services .row.g-4 {
+        gap: 1rem; /* Maintain reduced gap for smaller screens */
+    }
+    .our-services .service-item {
+        margin: 0; /* Remove default margin since gap is handled by row */
+        width: 100%; /* Full width for mobile */
+        border: none; /* Reinforce no border */
+    }
+}
+
+/* Our Fleet */
+.our-fleet {
+    padding: 5vw;
+    text-align: center;
+    background: #F6F6F6;
+    border-radius: 15px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-family-main);
+}
+
+.our-fleet .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.our-fleet .header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fleet-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch; /* Ensure items stretch to match the tallest */
+}
+
+.fleet-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease 0.3s;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fleet-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-fleet.visible .header h2 {
+    opacity: 1;
+}
+
+.our-fleet.visible .fleet-item {
+    opacity: 1;
+}
+
+.fleet-item h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.fleet-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.fleet-item .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.fleet-item .info span i {
+    margin-right: 5px;
+}
+
+.more-fleet {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .fleet-item {
+        width: 31%;
+    }
+    .our-fleet .header {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 576px) {
+    .our-fleet .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .fleet-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Media Queries (excluding navbar and footer-specific ones) */
+@media (max-width: 768px) {
+    .banner-section .booking-widget {
+        position: static;
+        transform: none;
+        margin: 2rem auto;
+    }
+    .our-services .service-item,
+    .fleet-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        padding: 2rem;
+    }
+    .banner-section {
+        padding: 2rem;
+    }
+    .how-it-works {
+        padding: 2rem;
+    }
+    .our-services {
+        padding: 2rem;
+    }
+    .our-fleet {
+        padding: 2rem;
+    }
+}
+@media (min-width: 992px) {
+    .our-services .service-item {
+        display: inline-block;
+        width: 90%; /* Increased from 31% for wider cards on laptops */
+        margin: 0 0.5%; /* Reduced margin to accommodate wider cards */
+    }
+
+}
+
+/* Mobile screens: Reduce gap between cards */
+@media (max-width: 767px) {
+    .our-services .row.g-4 {
+        gap: 1rem; /* Reduce from 1.5rem (g-4) to 1rem for smaller gap */
+    }
+    .our-services .service-item {
+        margin: 0; /* Remove default margin since gap is handled by row */
+    }
+}
